@@ -6,7 +6,7 @@ import com.ata.bean.CredentialsBean;
 
 public interface CredentialsBeanDao {
 	
-	String createCredentials(CredentialsBean bean);
+	String createCredentials(CredentialsBean cbean);
 	int deleteCredentials(ArrayList<String> li);
 	boolean updateCredentials(CredentialsBean bean);
 	CredentialsBean findByID(String UserId);

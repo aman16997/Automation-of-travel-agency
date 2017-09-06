@@ -6,9 +6,9 @@ import com.ata.bean.ProfileBean;
 
 public interface ProfileBeanDao {
 	
-	String createVehicle(ProfileBean bean);
+	String createProfile(ProfileBean pbean);
 	int deleteProfile(ArrayList<String> li);
-	boolean updateCredentials(ProfileBean bean);
+	boolean updateProfile(ProfileBean bean);
 	ProfileBean findByID(String UserId);
 	ArrayList<ProfileBean> findAll();
 

@@ -17,10 +17,17 @@
 	<%@ include file="header.html"%>
 
 	<div class="container">
-		<div class="jumbotron">
+		<div class="row">
+	    <div class="col-md-6">
+	    
+	    	<!-- Left Content -->
+	    
+	    </div>
+	    <div class="col-md-6"><span class="pull-right">
+			<div class="jumbotron">
 			<div class="row">
 				<h2 style="text-align: center">Sign Up Here</h2>
-				<div style="width: 30%; margin: 25px auto">
+				<div style="margin: 25px auto">
 				<!-- Form -->
 					<form action="SignUp" method="post" onsubmit="return validateForm()"
 						name="myForm">
@@ -50,7 +57,7 @@
 						<!-- Date of Birth  -->
 						<div class="form-group">
 							<div class="input-group">
-								<input class="form-control" id="lastName" name="lastName"
+								<input class="form-control" id="lastName" name="dob"
 									type="date" placeholder="Date of Birth" required />
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
@@ -221,6 +228,10 @@
 				</div>
 			</div>
 		</div>
+	    </span>
+	    </div>
+  </div>
+		
 	</div>
 
 

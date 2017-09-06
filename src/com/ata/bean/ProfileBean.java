@@ -1,13 +1,11 @@
 package com.ata.bean;
 
-import java.util.Date;
-
 public class ProfileBean {
 
 	String userId;
 	String firstName;
 	String lastName;
-	Date dateOfBirth;
+	String dateOfBirth;
 	String gender;
 	String street;
 	String location;
@@ -16,7 +14,6 @@ public class ProfileBean {
 	String pincode;
 	String mobileNo;
 	String emailId;
-	String password;
 	public String getUserId() {
 		return userId;
 	}
@@ -35,10 +32,10 @@ public class ProfileBean {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public Date getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 	public String getGender() {
@@ -88,12 +85,6 @@ public class ProfileBean {
 	}
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	
 	

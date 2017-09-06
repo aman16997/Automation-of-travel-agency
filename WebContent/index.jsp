@@ -17,7 +17,8 @@
 
 
 	<div class="container">
-		<header class="jumbotron">
+	
+		<div class="jumbotron">
 		<div class="container">
 
 			<div class="row">
@@ -61,7 +62,7 @@
 		</h5>
 		</p>
 	</div>
-	</header>
+	</div>
 	</div>
 
 

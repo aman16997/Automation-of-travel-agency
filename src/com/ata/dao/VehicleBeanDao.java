@@ -10,7 +10,7 @@ public interface VehicleBeanDao {
 
 	String createVehicle(VehicleBean bean);
 	int deleteVehicle(ArrayList<String> li);
-	boolean updateCredentials(VehicleBean bean);
+	boolean updateVehicle(VehicleBean bean);
 	VehicleBean findByID(String UserId);
 	ArrayList<VehicleBean> findAll();
 }

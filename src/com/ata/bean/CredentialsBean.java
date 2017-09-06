@@ -6,6 +6,14 @@ public class CredentialsBean {
 	String password;
 	String userType;
 	int loginStatus;
+	ProfileBean profile;
+	
+	public ProfileBean getProfile() {
+		return profile;
+	}
+	public void setProfile(ProfileBean profile) {
+		this.profile = profile;
+	}
 	public String getUserId() {
 		return userId;
 	}

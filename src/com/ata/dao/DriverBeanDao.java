@@ -7,9 +7,9 @@ import com.ata.bean.DriverBean;
 
 public interface DriverBeanDao {
 	
-	String createVehicle(DriverBean bean);
+	String createDriver(DriverBean bean);
 	int deleteDriver(ArrayList<String> li);
-	boolean updateCredentials(DriverBean bean);
+	boolean updateDriver(DriverBean bean);
 	DriverBean findByID(String UserId);
 	ArrayList<DriverBean> findAll();
 
