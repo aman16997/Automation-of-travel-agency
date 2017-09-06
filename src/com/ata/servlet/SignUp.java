@@ -2,7 +2,6 @@ package com.ata.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,9 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ata.bean.CredentialsBean;
 import com.ata.bean.ProfileBean;
-import com.ata.dao.CredentialsBeanImp;
-import com.ata.dao.ProfileBeanDao;
-import com.ata.dao.ProfileBeanImp;
+import com.ata.util.UserImp;
 
 
 
@@ -61,17 +58,15 @@ public class SignUp extends HttpServlet {
 		// Object of Credentials Bean class
 				CredentialsBean cbean = new CredentialsBean();
 				cbean.setPassword(password);
-				cbean.setUserType("C");
-				CredentialsBeanImp dao = new CredentialsBeanImp();
-				String id = dao.createCredentials(cbean);
-				System.out.println(id);
-				if(!id.equalsIgnoreCase("FAIL") || !id.equalsIgnoreCase(null) )
-				{
-					pbean.setUserId(id);
-					ProfileBeanImp pdao = new ProfileBeanImp();
-					pdao.createProfile(pbean);
-				}
 				
+			// Calling the UserImp layer for Register Function
+				UserImp user = new UserImp();
+				String id = user.register(pbean, cbean);
+				
+			//For Output setting the attribute
+			request.setAttribute("Name", firstName + " " + lastName);
+			request.setAttribute("Result", id);
+			request.getRequestDispatcher("home.jsp").forward(request, response);
 				
 		
 		

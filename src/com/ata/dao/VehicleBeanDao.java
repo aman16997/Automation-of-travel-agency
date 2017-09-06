@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 import com.ata.bean.VehicleBean;
 
-
-
 public interface VehicleBeanDao {
 
 	String createVehicle(VehicleBean bean);
