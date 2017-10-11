@@ -10,6 +10,7 @@ public class UserImp implements User {
 	@Override
 	public String login(CredentialsBean credentialsBean) {
 		 
+		CredentialsBeanImp cb = new CredentialsBeanImp();	// Create the object of Credentials Interface
 		
 		
 		return null;

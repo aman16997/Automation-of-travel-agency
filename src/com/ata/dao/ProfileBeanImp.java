@@ -18,7 +18,6 @@ public class ProfileBeanImp implements ProfileBeanDao {
 
 	@Override
 	public String createProfile(ProfileBean pbean) {
-
 		try 
 		{
 			PreparedStatement ps=
@@ -56,8 +55,7 @@ public class ProfileBeanImp implements ProfileBeanDao {
 	@Override
 	public int deleteProfile(ArrayList<String> li)
 	{
-		String userId = li.get(0);		// Why use of get(0)
-		
+		String userId = li.get(0);		
 		try
 		{
 			PreparedStatement ps = con.prepareStatement("DELETE FROM ATA_TBL_USER_PROFILE WHERE USERID = ?");

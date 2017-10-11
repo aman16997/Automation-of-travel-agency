@@ -21,12 +21,14 @@ public class CredentialsBeanImp implements CredentialsBeanDao {
 		try {
 			// Auto Generated Id 
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM ATA_TBL_ID");
-			
+			System.out.println("1============");
 			ResultSet rs = ps.executeQuery();
 			rs.last();
-			
-			ProfileBean pb = new ProfileBean();
+			System.out.println("2============");
+			ProfileBean pb = cbean.getProfile();	
+			System.out.println(pb.getFirstName());
 			String id = pb.getFirstName().substring(0,2)+rs.getInt(2);
+			System.out.println(id);
 			
 			PreparedStatement ps1=con.prepareStatement("UPDATE ATA_TBL_ID SET SVAL= SVAL+1");
 			ps1.executeUpdate();
@@ -40,7 +42,7 @@ public class CredentialsBeanImp implements CredentialsBeanDao {
 			ps2.setString(3, cbean.getUserType());
 			ps2.setInt(4, 0);
 			// to do 
-			ps2.executeQuery();
+			ps2.executeUpdate();
 			return id;
 			}
 			catch (SQLException e) 

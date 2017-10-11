@@ -5,6 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Automation | SignUp</title>
+<style>
+input[type="date"]:before{
+    color:lightgray;
+    content:attr(placeholder);
+}
+
+input[type="date"].full:before {
+    color:black;
+    content:""!important;
+}
+</style>
+
 <link rel="icon" href="css/Airplane_Blue.png" type="image/x-icon">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet"

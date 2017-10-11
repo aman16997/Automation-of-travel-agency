@@ -40,10 +40,12 @@ public class SignUp extends HttpServlet {
 		String state = request.getParameter("state");
 		String pincode = request.getParameter("pincode");
 		String phone = request.getParameter("mobileNumber");
+		System.out.println(firstName);
 		
 		// Object of Profile Bean Class
 				ProfileBean pbean = new ProfileBean();
 				pbean.setFirstName(firstName);
+				
 				pbean.setLastName(lastName);
 				pbean.setDateOfBirth(dateOfBirth);
 				pbean.setGender(gender);
